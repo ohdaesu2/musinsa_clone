@@ -11,7 +11,7 @@ class Brand(BaseModel):
         db_table = "brand"
         verbose_name = _("Brand")
         verbose_name_plural = f'{verbose_name} {_("List")}'
-        ordering = ['-id']
+        ordering = ["-id"]
 
     def __str__(self):
         return f"Brand(pk={self.pk}, name={self.name})"

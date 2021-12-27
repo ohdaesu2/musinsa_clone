@@ -13,7 +13,7 @@ class Color(BaseModel):
         db_table = "color"
         verbose_name = _("Color")
         verbose_name_plural = f'{verbose_name} {_("List")}'
-        ordering = ['-id']
+        ordering = ["-id"]
 
     def __str__(self):
         return f"Color(pk={self.pk}, name={self.name})"

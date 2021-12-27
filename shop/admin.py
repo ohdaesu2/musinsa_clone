@@ -31,4 +31,3 @@ class GuideAdmin(admin.ModelAdmin):
 @admin.register(Size)
 class SizeAdmin(admin.ModelAdmin):
     pass
-

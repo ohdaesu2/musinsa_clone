@@ -6,40 +6,56 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('orders', '0001_create_initial_models'),
+        ("orders", "0001_create_initial_models"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='discountcoupon',
-            options={'ordering': ['-id'], 'verbose_name': 'Discount_Coupon', 'verbose_name_plural': 'Discount_Coupon List'},
+            name="discountcoupon",
+            options={
+                "ordering": ["-id"],
+                "verbose_name": "Discount_Coupon",
+                "verbose_name_plural": "Discount_Coupon List",
+            },
         ),
         migrations.AlterModelOptions(
-            name='order',
-            options={'ordering': ['-id'], 'verbose_name': 'Order', 'verbose_name_plural': '순서: List'},
+            name="order",
+            options={
+                "ordering": ["-id"],
+                "verbose_name": "Order",
+                "verbose_name_plural": "순서: List",
+            },
         ),
         migrations.AlterModelOptions(
-            name='orderitem',
-            options={'ordering': ['-id'], 'verbose_name': 'Order_Item', 'verbose_name_plural': 'Order_Item List'},
+            name="orderitem",
+            options={
+                "ordering": ["-id"],
+                "verbose_name": "Order_Item",
+                "verbose_name_plural": "Order_Item List",
+            },
         ),
         migrations.AlterModelOptions(
-            name='shoppingbag',
-            options={'ordering': ['-id'], 'verbose_name': 'Shoppingbag', 'verbose_name_plural': 'Shoppingbag List'},
+            name="shoppingbag",
+            options={
+                "ordering": ["-id"],
+                "verbose_name": "Shoppingbag",
+                "verbose_name_plural": "Shoppingbag List",
+            },
         ),
         migrations.AlterModelTable(
-            name='discountcoupon',
-            table='discount_coupon',
+            name="discountcoupon",
+            table="discount_coupon",
         ),
         migrations.AlterModelTable(
-            name='order',
-            table='order',
+            name="order",
+            table="order",
         ),
         migrations.AlterModelTable(
-            name='orderitem',
-            table='order_item',
+            name="orderitem",
+            table="order_item",
         ),
         migrations.AlterModelTable(
-            name='shoppingbag',
-            table='shoppingbag',
+            name="shoppingbag",
+            table="shoppingbag",
         ),
     ]

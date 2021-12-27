@@ -7,14 +7,22 @@ from member.models.enums.level_minimum_point import LevelMinimumPoint
 
 class UserLevel(models.Model):
     level_name = models.PositiveIntegerField(
-        default=LevelChoices.Noob, choices=LevelChoices.choices, verbose_name=_("Level Name")
+        default=LevelChoices.Noob,
+        choices=LevelChoices.choices,
+        verbose_name=_("Level Name"),
     )
-    discount_rate = models.PositiveSmallIntegerField(blank=True, null=True, verbose_name=_("Discount Rate"))
+    discount_rate = models.PositiveSmallIntegerField(
+        blank=True, null=True, verbose_name=_("Discount Rate")
+    )
     current_level_minimum_point = models.PositiveIntegerField(
-        choices=LevelMinimumPoint.choices, default=LevelMinimumPoint.Noob, verbose_name=_("Current Level Minimum Point")
+        choices=LevelMinimumPoint.choices,
+        default=LevelMinimumPoint.Noob,
+        verbose_name=_("Current Level Minimum Point"),
     )
     next_level_minimum_point = models.PositiveIntegerField(
-        choices=LevelMinimumPoint.choices, default=LevelMinimumPoint.Rookie, verbose_name=_("Next Level Minimum Point")
+        choices=LevelMinimumPoint.choices,
+        default=LevelMinimumPoint.Rookie,
+        verbose_name=_("Next Level Minimum Point"),
     )
     monthly_discount_coupon_rate = models.PositiveSmallIntegerField(
         blank=True, null=True, verbose_name=_("Monthly Discount Coupon Rate")

@@ -6,23 +6,62 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('member', '0003_create_total_point_and_minimun_point'),
+        ("member", "0003_create_total_point_and_minimun_point"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='userlevel',
-            name='current_level_minimum_point',
-            field=models.PositiveIntegerField(choices=[('0', '0'), ('2000', '2000'), ('10000', '10000'), ('100000', '100000'), ('200000', '200000'), ('500000', '500000'), ('1000000', '1000000'), ('2000000', '2000000')], default='0', verbose_name='Current Level Minimum Point'),
+            model_name="userlevel",
+            name="current_level_minimum_point",
+            field=models.PositiveIntegerField(
+                choices=[
+                    ("0", "0"),
+                    ("2000", "2000"),
+                    ("10000", "10000"),
+                    ("100000", "100000"),
+                    ("200000", "200000"),
+                    ("500000", "500000"),
+                    ("1000000", "1000000"),
+                    ("2000000", "2000000"),
+                ],
+                default="0",
+                verbose_name="Current Level Minimum Point",
+            ),
         ),
         migrations.AlterField(
-            model_name='userlevel',
-            name='level_name',
-            field=models.PositiveIntegerField(choices=[('1', 'Noob'), ('2', 'Rookie'), ('3', 'Member'), ('4', 'Bronze'), ('5', 'Silver'), ('6', 'Gold'), ('7', 'Platinum'), ('8', 'Diamond')], default='1', verbose_name='Level Name'),
+            model_name="userlevel",
+            name="level_name",
+            field=models.PositiveIntegerField(
+                choices=[
+                    ("1", "Noob"),
+                    ("2", "Rookie"),
+                    ("3", "Member"),
+                    ("4", "Bronze"),
+                    ("5", "Silver"),
+                    ("6", "Gold"),
+                    ("7", "Platinum"),
+                    ("8", "Diamond"),
+                ],
+                default="1",
+                verbose_name="Level Name",
+            ),
         ),
         migrations.AlterField(
-            model_name='userlevel',
-            name='next_level_minimum_point',
-            field=models.PositiveIntegerField(choices=[('0', '0'), ('2000', '2000'), ('10000', '10000'), ('100000', '100000'), ('200000', '200000'), ('500000', '500000'), ('1000000', '1000000'), ('2000000', '2000000')], default='2000', verbose_name='Next Level Minimum Point'),
+            model_name="userlevel",
+            name="next_level_minimum_point",
+            field=models.PositiveIntegerField(
+                choices=[
+                    ("0", "0"),
+                    ("2000", "2000"),
+                    ("10000", "10000"),
+                    ("100000", "100000"),
+                    ("200000", "200000"),
+                    ("500000", "500000"),
+                    ("1000000", "1000000"),
+                    ("2000000", "2000000"),
+                ],
+                default="2000",
+                verbose_name="Next Level Minimum Point",
+            ),
         ),
     ]

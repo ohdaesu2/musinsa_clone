@@ -6,88 +6,115 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('shop', '0004_create_category_color_guide_size_model'),
+        ("shop", "0004_create_category_color_guide_size_model"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='category',
-            name='parent_category',
-            field=models.IntegerField(blank=True, verbose_name='Parent Category'),
+            model_name="category",
+            name="parent_category",
+            field=models.IntegerField(blank=True, verbose_name="Parent Category"),
         ),
         migrations.AlterField(
-            model_name='clothes',
-            name='description_url',
-            field=models.TextField(blank=True, verbose_name='Description URL'),
+            model_name="clothes",
+            name="description_url",
+            field=models.TextField(blank=True, verbose_name="Description URL"),
         ),
         migrations.AlterField(
-            model_name='clothes',
-            name='image_url',
-            field=models.ImageField(blank=True, upload_to='clothes/%Y/%m/%d'),
+            model_name="clothes",
+            name="image_url",
+            field=models.ImageField(blank=True, upload_to="clothes/%Y/%m/%d"),
         ),
         migrations.AlterField(
-            model_name='clothes',
-            name='is_discount',
-            field=models.CharField(choices=[('T', 'True'), ('F', 'False')], default='F', max_length=1, verbose_name='Is Discount'),
+            model_name="clothes",
+            name="is_discount",
+            field=models.CharField(
+                choices=[("T", "True"), ("F", "False")],
+                default="F",
+                max_length=1,
+                verbose_name="Is Discount",
+            ),
         ),
         migrations.AlterField(
-            model_name='clothes',
-            name='is_visualize',
-            field=models.CharField(choices=[('T', 'True'), ('F', 'False')], default='F', max_length=1, verbose_name='Is Visualize'),
+            model_name="clothes",
+            name="is_visualize",
+            field=models.CharField(
+                choices=[("T", "True"), ("F", "False")],
+                default="F",
+                max_length=1,
+                verbose_name="Is Visualize",
+            ),
         ),
         migrations.AlterField(
-            model_name='clothes',
-            name='unique_number',
-            field=models.CharField(blank=True, max_length=50, verbose_name='Unique Number'),
+            model_name="clothes",
+            name="unique_number",
+            field=models.CharField(
+                blank=True, max_length=50, verbose_name="Unique Number"
+            ),
         ),
         migrations.AlterField(
-            model_name='size',
-            name='chest_width',
-            field=models.IntegerField(blank=True, default=0, verbose_name='Chest Width'),
+            model_name="size",
+            name="chest_width",
+            field=models.IntegerField(
+                blank=True, default=0, verbose_name="Chest Width"
+            ),
         ),
         migrations.AlterField(
-            model_name='size',
-            name='clothes_division',
-            field=models.CharField(choices=[('O', 'Outer'), ('T', 'Top'), ('P', 'Pants'), ('S', 'Shoes')], default='T', max_length=1, verbose_name='Clothes Division'),
+            model_name="size",
+            name="clothes_division",
+            field=models.CharField(
+                choices=[("O", "Outer"), ("T", "Top"), ("P", "Pants"), ("S", "Shoes")],
+                default="T",
+                max_length=1,
+                verbose_name="Clothes Division",
+            ),
         ),
         migrations.AlterField(
-            model_name='size',
-            name='hem',
-            field=models.IntegerField(blank=True, default=0, verbose_name='Hem'),
+            model_name="size",
+            name="hem",
+            field=models.IntegerField(blank=True, default=0, verbose_name="Hem"),
         ),
         migrations.AlterField(
-            model_name='size',
-            name='outseam',
-            field=models.IntegerField(blank=True, default=0, verbose_name='Outseam'),
+            model_name="size",
+            name="outseam",
+            field=models.IntegerField(blank=True, default=0, verbose_name="Outseam"),
         ),
         migrations.AlterField(
-            model_name='size',
-            name='rise',
-            field=models.IntegerField(blank=True, default=0, verbose_name='Rise'),
+            model_name="size",
+            name="rise",
+            field=models.IntegerField(blank=True, default=0, verbose_name="Rise"),
         ),
         migrations.AlterField(
-            model_name='size',
-            name='shoulder_width',
-            field=models.IntegerField(blank=True, default=0, verbose_name='Shoulder Width'),
+            model_name="size",
+            name="shoulder_width",
+            field=models.IntegerField(
+                blank=True, default=0, verbose_name="Shoulder Width"
+            ),
         ),
         migrations.AlterField(
-            model_name='size',
-            name='size',
-            field=models.IntegerField(blank=True, default=200, verbose_name='Size'),
+            model_name="size",
+            name="size",
+            field=models.IntegerField(blank=True, default=200, verbose_name="Size"),
         ),
         migrations.AlterField(
-            model_name='size',
-            name='sleeve_length',
-            field=models.IntegerField(blank=True, default=0, verbose_name='Sleeve Length'),
+            model_name="size",
+            name="sleeve_length",
+            field=models.IntegerField(
+                blank=True, default=0, verbose_name="Sleeve Length"
+            ),
         ),
         migrations.AlterField(
-            model_name='size',
-            name='thigh_width',
-            field=models.IntegerField(blank=True, default=0, verbose_name='Thigh Width'),
+            model_name="size",
+            name="thigh_width",
+            field=models.IntegerField(
+                blank=True, default=0, verbose_name="Thigh Width"
+            ),
         ),
         migrations.AlterField(
-            model_name='size',
-            name='waist_width',
-            field=models.IntegerField(blank=True, default=0, verbose_name='Waist Width'),
+            model_name="size",
+            name="waist_width",
+            field=models.IntegerField(
+                blank=True, default=0, verbose_name="Waist Width"
+            ),
         ),
     ]

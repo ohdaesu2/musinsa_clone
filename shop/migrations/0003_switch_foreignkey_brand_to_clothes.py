@@ -7,17 +7,24 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('shop', '0002_create_brand_model'),
+        ("shop", "0002_create_brand_model"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='brand',
-            name='clothes',
+            model_name="brand",
+            name="clothes",
         ),
         migrations.AddField(
-            model_name='clothes',
-            name='brand',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='brand', to='shop.Brand', verbose_name='Brand'),
+            model_name="clothes",
+            name="brand",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="brand",
+                to="shop.Brand",
+                verbose_name="Brand",
+            ),
         ),
     ]
