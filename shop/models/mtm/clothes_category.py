@@ -13,7 +13,7 @@ class ClothesCategory(BaseModel):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        verbose_name=_("Clothes")
+        verbose_name=_("Clothes"),
     )
     category = models.ForeignKey(
         to="Category",
@@ -21,14 +21,14 @@ class ClothesCategory(BaseModel):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        verbose_name=_("Category")
+        verbose_name=_("Category"),
     )
 
     class Meta:
         db_table = "clothes_category"
         verbose_name = _("Clothes Category")
         verbose_name_plural = f'{verbose_name} {_("List")}'
-        ordering = ['-id']
+        ordering = ["-id"]
 
     def __str__(self):
         return f"Clothes_Category(pk={self.pk})"

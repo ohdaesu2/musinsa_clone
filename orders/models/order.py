@@ -10,7 +10,7 @@ class Order(BaseModel):
         to="member.User",
         related_name="consumer",
         on_delete=models.CASCADE,
-        verbose_name=_("Consumer")
+        verbose_name=_("Consumer"),
     )
     total_price = models.PositiveIntegerField(default=0, verbose_name=_("Total Price"))
 
@@ -18,7 +18,7 @@ class Order(BaseModel):
         db_table = "order"
         verbose_name = _("Order")
         verbose_name_plural = f'{verbose_name} {_("List")}'
-        ordering = ['-id']
+        ordering = ["-id"]
 
     def __str__(self):
         return f"Order(pk={self.pk}, name={self.total_price})"

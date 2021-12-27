@@ -14,7 +14,7 @@ class ClothesColor(BaseModel):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        verbose_name=_("Clothes")
+        verbose_name=_("Clothes"),
     )
     color = models.ForeignKey(
         to="Color",
@@ -22,15 +22,14 @@ class ClothesColor(BaseModel):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        verbose_name=_("Color")
+        verbose_name=_("Color"),
     )
 
     class Meta:
         db_table = "clothes_color"
         verbose_name = _("Clothes Color")
         verbose_name_plural = f'{verbose_name} {_("List")}'
-        ordering = ['-id']
+        ordering = ["-id"]
 
     def __str__(self):
         return f"Clothes_Color(pk={self.pk})"
-

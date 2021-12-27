@@ -22,7 +22,7 @@ class Category(BaseModel):
         db_table = "category"
         verbose_name = _("Category")
         verbose_name_plural = f'{verbose_name} {_("List")}'
-        ordering = ['-id']
+        ordering = ["-id"]
 
     def __str__(self):
         return f"Category(pk={self.pk}, name={self.name})"

@@ -7,35 +7,80 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Clothes',
+            name="Clothes",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created_at', models.DateTimeField(auto_now_add=True, verbose_name='Created At')),
-                ('updated_at', models.DateTimeField(auto_now=True, verbose_name='Updated At')),
-                ('name', models.CharField(max_length=50, verbose_name='Name')),
-                ('price', models.IntegerField(default=0, verbose_name='Price')),
-                ('season', models.CharField(blank=True, max_length=5, verbose_name='Season')),
-                ('gender', models.CharField(blank=True, choices=[('M', 'Male'), ('F', 'Female')], max_length=1, verbose_name='Gender')),
-                ('unique_number', models.CharField(max_length=50, verbose_name='Unique Number')),
-                ('amount', models.IntegerField(default=0, verbose_name='Amount')),
-                ('description_url', models.TextField(verbose_name='Description URL')),
-                ('views_count', models.IntegerField(default=0, verbose_name='Views Count')),
-                ('likes_count', models.IntegerField(default=0, verbose_name='Likes Count')),
-                ('total_sales', models.IntegerField(default=0, verbose_name='Total Sales')),
-                ('is_visualize', models.BooleanField(default=False, verbose_name='Is Visualize')),
-                ('is_discount', models.BooleanField(default=False, verbose_name='Is Discount')),
-                ('discount_rate', models.IntegerField(default=0, verbose_name='Discount Rate')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "created_at",
+                    models.DateTimeField(auto_now_add=True, verbose_name="Created At"),
+                ),
+                (
+                    "updated_at",
+                    models.DateTimeField(auto_now=True, verbose_name="Updated At"),
+                ),
+                ("name", models.CharField(max_length=50, verbose_name="Name")),
+                ("price", models.IntegerField(default=0, verbose_name="Price")),
+                (
+                    "season",
+                    models.CharField(blank=True, max_length=5, verbose_name="Season"),
+                ),
+                (
+                    "gender",
+                    models.CharField(
+                        blank=True,
+                        choices=[("M", "Male"), ("F", "Female")],
+                        max_length=1,
+                        verbose_name="Gender",
+                    ),
+                ),
+                (
+                    "unique_number",
+                    models.CharField(max_length=50, verbose_name="Unique Number"),
+                ),
+                ("amount", models.IntegerField(default=0, verbose_name="Amount")),
+                ("description_url", models.TextField(verbose_name="Description URL")),
+                (
+                    "views_count",
+                    models.IntegerField(default=0, verbose_name="Views Count"),
+                ),
+                (
+                    "likes_count",
+                    models.IntegerField(default=0, verbose_name="Likes Count"),
+                ),
+                (
+                    "total_sales",
+                    models.IntegerField(default=0, verbose_name="Total Sales"),
+                ),
+                (
+                    "is_visualize",
+                    models.BooleanField(default=False, verbose_name="Is Visualize"),
+                ),
+                (
+                    "is_discount",
+                    models.BooleanField(default=False, verbose_name="Is Discount"),
+                ),
+                (
+                    "discount_rate",
+                    models.IntegerField(default=0, verbose_name="Discount Rate"),
+                ),
             ],
             options={
-                'verbose_name': 'Clothes',
-                'verbose_name_plural': 'Clothes List',
-                'db_table': 'clothes',
-                'ordering': ['-id'],
+                "verbose_name": "Clothes",
+                "verbose_name_plural": "Clothes List",
+                "db_table": "clothes",
+                "ordering": ["-id"],
             },
         ),
     ]

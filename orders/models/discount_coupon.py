@@ -13,7 +13,7 @@ class DiscountCoupon(BaseModel):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        verbose_name=_("User")
+        verbose_name=_("User"),
     )
     brand = models.ForeignKey(
         to="shop.Brand",
@@ -21,11 +21,16 @@ class DiscountCoupon(BaseModel):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
-        verbose_name=_("Brand")
+        verbose_name=_("Brand"),
     )
-    discount_rate = models.PositiveIntegerField(default=0, verbose_name=_("Discount Rate"))
+    discount_rate = models.PositiveIntegerField(
+        default=0, verbose_name=_("Discount Rate")
+    )
     is_enabled = models.CharField(
-        max_length=1, choices=BooleanChoices.choices, default=BooleanChoices.FALSE, verbose_name=_("Is Enabled")
+        max_length=1,
+        choices=BooleanChoices.choices,
+        default=BooleanChoices.FALSE,
+        verbose_name=_("Is Enabled"),
     )
     disabled_at = models.DateTimeField(auto_now_add=True, verbose_name=_("Disabled At"))
 
@@ -33,7 +38,7 @@ class DiscountCoupon(BaseModel):
         db_table = "discount_coupon"
         verbose_name = _("Discount_Coupon")
         verbose_name_plural = f'{verbose_name} {_("List")}'
-        ordering = ['-id']
+        ordering = ["-id"]
 
     def __str__(self):
         return f"Discount Coupon(pk={self.pk}, name={self.brand})"
