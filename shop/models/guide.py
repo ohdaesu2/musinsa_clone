@@ -17,7 +17,7 @@ class Guide(BaseModel):
     thickness = models.CharField(
         max_length=10, blank=True, verbose_name=_("Thickness")
     )  # 두께
-    Season = models.CharField(max_length=10, blank=True, verbose_name=_("Season"))  # 시즌
+    season = models.CharField(max_length=10, blank=True, verbose_name=_("Season"))  # 시즌
 
     class Meta:
         db_table = "clothes_guide"

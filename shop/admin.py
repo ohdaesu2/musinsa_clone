@@ -2,6 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 from shop.models.brand import Brand
+from shop.models.category import Category
 from shop.models.clothes import Clothes
 from shop.models.color import Color
 from shop.models.guide import Guide
@@ -30,4 +31,9 @@ class GuideAdmin(admin.ModelAdmin):
 
 @admin.register(Size)
 class SizeAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
     pass

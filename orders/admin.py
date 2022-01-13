@@ -4,7 +4,7 @@ from django.contrib import admin
 from orders.models.discount_coupon import DiscountCoupon
 from orders.models.order import Order
 from orders.models.order_item import OrderItem
-from orders.models.shoppingbag import ShoppingBag
+from orders.models.shoppingbag import Shoppingbag
 
 
 @admin.register(DiscountCoupon)
@@ -22,6 +22,6 @@ class OrderItemAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(ShoppingBag)
+@admin.register(Shoppingbag)
 class ShoppingbagAdmin(admin.ModelAdmin):
     pass

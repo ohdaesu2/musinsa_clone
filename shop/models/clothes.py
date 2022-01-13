@@ -45,7 +45,10 @@ class Clothes(BaseModel):
         verbose_name=_("Categories"),
     )
     color = models.ManyToManyField(
-        to="Color", through="ClothesColor", blank=True, verbose_name=_("Color")
+        to="Color",
+        through="ClothesColor",
+        blank=True,
+        verbose_name=_("Color")
     )
 
     season = models.CharField(max_length=5, blank=True, verbose_name=_("Season"))
@@ -86,3 +89,7 @@ class Clothes(BaseModel):
 
     def __str__(self):
         return f"Clothes(pk={self.pk}, name={self.name})"
+
+
+
+
