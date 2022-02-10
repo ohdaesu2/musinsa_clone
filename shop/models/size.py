@@ -51,5 +51,5 @@ class Size(BaseModel):
 
     def __str__(self):
         return (
-            f"Size(pk={self.pk}, name={self.clothes_division}, size={self.size_code})"
+            f"Size(pk={self.pk}, division={self.clothes_division}, size={self.size_code}, shoes={self.size})"
         )

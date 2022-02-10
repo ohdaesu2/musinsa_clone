@@ -6,7 +6,7 @@ from utils.models.base_model import BaseModel
 from utils.models.enums.boolean_choices import BooleanChoices
 
 
-class Shoppingbag(BaseModel):
+class ShoppingBag(BaseModel):
     clothes = models.ForeignKey(
         to="shop.Clothes",
         related_name="clothes_in_shoppingbag",

@@ -31,11 +31,10 @@ class User(AbstractUser, BaseModel):
     )
     user_level = models.ForeignKey(
         to="UserLevel",
-        default=default_user_level(),
+        default=default_user_level,
         related_name="user_level",
         on_delete=models.SET_NULL,
         null=True,
-        blank=True,
         verbose_name=_("User Level"),
     )
 
@@ -57,10 +56,10 @@ class User(AbstractUser, BaseModel):
         return f"User(pk={self.pk}, username={self.username})"
 
     def save(self, *args, **kwargs):
-        self.user_level = self.update_user_level()
+        self.user_level = self.__update_user_level()
         return super(User, self).save(*args, **kwargs)
 
-    def update_user_level(self):
+    def __update_user_level(self):
         if self.total_point > int(self.user_level.next_level_minimum_point):
             print(self.user_level.next_level_minimum_point)
 

@@ -41,7 +41,20 @@ class ClothesViewSet(
         serializer = self.get_serializer(clothes_obj, many=True)
 
         # logger.info("Show all Clothes List")
-        return Response(serializer.data)
+        return Response(serializer.data, status=200)
+
+    def retrieve(self, request, *args, **kwargs):
+        clothes_obj = self.get_object()
+        serializer = self.get_serializer(instance=clothes_obj)
+        return Response(serializer.data, status=200)
+        # TODO 옷 검색 횟수 1회 증가 하고 싶은데 instance를 변경할 수 는 없는건가요?
+        # if serializer.is_valid():
+        #     serializer.data['views_count'] +=1
+        #     serializer.save()
+        #     print(serializer.data)
+        #     return Response(serializer.data, status=200)
+        # else:
+        #     return Response({"message": _("retrieve error")}, status=400)
 
     @action(methods=["GET"], detail=False)
     def search(self, request):

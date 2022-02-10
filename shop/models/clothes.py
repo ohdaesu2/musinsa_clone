@@ -22,11 +22,9 @@ class Clothes(BaseModel):
         blank=True,
         verbose_name=_("Brand"),
     )
-    size = models.OneToOneField(
+    size = models.ManyToManyField(
         to="Size",
         related_name="clothes_size",
-        on_delete=models.SET_NULL,
-        null=True,
         blank=True,
         verbose_name=_("Size"),
     )
@@ -59,7 +57,7 @@ class Clothes(BaseModel):
         verbose_name=_("Gender"),
     )
     unique_number = models.CharField(
-        max_length=50, blank=True, verbose_name=_("Unique Number")
+        max_length=50, verbose_name=_("Unique Number")
     )
     amount = models.IntegerField(default=0, verbose_name=_("Amount"))
     image_url = models.ImageField(blank=True, upload_to="clothes/%Y/%m/%d")

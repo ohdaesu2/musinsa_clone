@@ -8,7 +8,7 @@ from member.models.enums.level_minimum_point import LevelMinimumPoint
 class UserLevel(models.Model):
     level_name = models.CharField(
         max_length=10,
-        default=LevelChoices.Noob,
+        default=LevelChoices.NOOB,
         choices=LevelChoices.choices,
         verbose_name=_("Level Name"),
     )
@@ -19,13 +19,13 @@ class UserLevel(models.Model):
     current_level_minimum_point = models.CharField(
         max_length=10,
         choices=LevelMinimumPoint.choices,
-        default=LevelMinimumPoint.Noob,
+        default=LevelMinimumPoint.NOOB,
         verbose_name=_("Current Level Minimum Point"),
     )
     next_level_minimum_point = models.CharField(
         max_length=10,
         choices=LevelMinimumPoint.choices,
-        default=LevelMinimumPoint.Rookie,
+        default=LevelMinimumPoint.ROOKIE,
         verbose_name=_("Next Level Minimum Point"),
     )
     monthly_discount_coupon_rate = models.PositiveSmallIntegerField(

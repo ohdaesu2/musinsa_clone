@@ -7,12 +7,14 @@ from shop.routes import shop_router
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("orders/", include("orders.urls")),
     path('api/token/', obtain_jwt_token),
     path('api/token/verify/', verify_jwt_token),
     path('api/token/refresh/', refresh_jwt_token),
+
     path('api/member/', include('member.urls')),
     path("api/shop/", include("shop.routes")),
+    path("api/orders/", include("orders.routes")),
+
     path("apiauth/", include("rest_framework.urls")),
     path("rest-auth/", include("rest_auth.urls")),
     path("rest-auth/", include("rest_auth.urls")),
